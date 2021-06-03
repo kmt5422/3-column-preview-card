@@ -1,0 +1,125 @@
+:root {
+    --bg-primary-1: hsl(31, 77%, 52%);
+    --bg-primary-2: hsl(184, 100%, 22%);
+    --bg-primary-3: hsl(179, 100%, 13%);
+    --neutral-white: hsla(0, 0%, 100%, 0.75);
+    --neutral-gray: hsl(0, 0%, 95%);
+    --fs-normal: 15px;
+    --ff-lexa: 'Lexend Deca', sans-serif;
+    --ff-big-shoulders: 'Big Shoulders Display', cursive;
+    --fw-normal: 400;
+    --fw-bold: 700;
+}
+
+body {
+    box-sizing: border-box;
+    font-size: var(--fs-normal);
+    font-family: var(--ff-lexa);
+}
+
+main {
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+.card {
+    padding: 3rem;
+    color: var(--neutral-white);
+    background-color: var(--bg-primary-1);
+    border-radius: 25px 25px 0 0;
+}
+
+.card:nth-child(2) {
+    background-color: var(--bg-primary-2);
+    border-radius: 0;
+}
+
+.card:nth-of-type(3) {
+    background-color: var(--bg-primary-3);
+    border-radius: 0 0 25px 25px;
+} 
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: var(--fw-bold);
+    color: var(--neutral-gray);
+    margin-top: 2rem;
+    font-family: var(--ff-big-shoulders);
+}
+
+p {
+    margin-top: 2rem;
+    line-height: 1.5rem;
+    height: 8rem;
+}
+
+button {
+    margin-top: 2rem;
+    border-style: none;
+    background-color: white;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+}
+
+@media only screen and (min-width: 1000px) {
+    body {
+        position: relative;
+        height: 100vh;
+    }
+
+    main {
+        flex-direction: row;
+        min-width: 800px;
+        max-width: 900%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .card {
+        border-radius: 25px 0 0 25px;
+        padding: 3rem;
+    }
+    
+    .card:nth-of-type(3) {
+        background-color: var(--bg-primary-3);
+        border-radius: 0 25px 25px 0;
+    }
+
+    #btn-1 {
+        background-color: white;
+        color: var(--bg-primary-1);
+    }
+
+    #btn-2 {
+        background-color: white;
+        color: var(--bg-primary-2);
+    }
+
+    #btn-3 {
+        background-color: white;
+        color: var(--bg-primary-3);
+    }
+
+    #btn-1:hover, #btn-2:hover, #btn-3:hover {
+        border: solid 2px white;
+        color: white;
+        background-color: inherit;
+    }
+
+    p {
+        height: 12rem;
+    }
+
+}
+
+@media only screen and (min-width: 1440px) {
+    main {
+        max-width: 1000px;
+    }
+}
